@@ -87,15 +87,9 @@ Escribir la consulta en la consola que permita realizar el siguiente itinerario 
 ### Punto 7
 Luego de evaluar el itinerario de Ana, queda con 196 de resistencia, como amigos a Marcos (30 de resistencia) y Rodri (45 de resistencia).
 
-Segunda entrega
-Temas a evaluar
-* Orden superior
-* Refactor | Modificaciones a un código existente
-* Modelado de información
-* Recursividad
+## Segunda entrega
 
-
-Punto 1
+### Punto 1
 De los clientes, además del nombre, resistencia y sus amigos, se desea saber qué bebidas tomó.
 1. Hacer las modificaciones en la abstracción cliente y considerar
    1. Que Rodri tomó un tintico
@@ -118,15 +112,18 @@ b. Hacer que un cliente pueda tomar una bebida. Además del efecto que le causa 
 1. Hacer la función dameOtro, que hace que un cliente vuelva a tomarse el último trago que se tomó.
 
 
-Punto 2
+
+### Punto 2
 1. Definir la función cualesPuedeTomar, la cual recibe a un cliente y una lista de tragos y nos dice cuáles de esas bebidas lo dejarían con una resistencia mayor a cero, en caso de tomarlas solas.
 
 
 1. Definir la función cuantasPuedeTomar, que devuelva la cantidad de bebidas en base al punto a).
 
 
-Punto 3
+
+### Punto 3
 Ahora, aparecen diferentes itinerarios que pueden realizar los clientes, de los cuales se registran su nombre, una duración estimada  y lo más importante, el detalle de las acciones que componen el itinerario.
+
 Algunos itinerarios son los siguientes:
 * Mezcla explosiva, se recomienda para 2.5 horas y consiste en  tomarse 2 Grog XD, 1 Klusener de Huevo y otro de Frutilla.
 * Itinerario básico, es como el del punto 7 de la primera parte, en 5 horas.
@@ -138,41 +135,36 @@ Algunos itinerarios son los siguientes:
    2. Deben utilizar como expresiones robertoCarlos, mezclaExplosiva, itinerarioBasico, salidaDeAmigos.
 1. Mostrar cómo rodri hace una salida de amigos y marcos una mezcla explosiva. 
 
-
-
-
-Punto 4
+### Punto 4
 1. Conocer la intensidad de un itinerario, que se calcula como la cantidad de acciones que realiza por hora. 
 Tip: si tenés problemas de tipos, podés intentar usar la función genericLength en lugar de la función length. Para eso tenés que escribir import Data.List arriba de todo en tu archivo .hs.
 2. Hacer que un cliente realice el itinerario más intenso, entre un conjunto de itinerarios dado. 
 
-
-Punto 5
+### Punto 5
    1. Definir a chuckNorris, que es un cliente que inicialmente se llamaba “Chuck”, tiene resistencia 1000, es amigo de Ana y tomó todas las sodas que existen en el universo, comenzando por una soda de nivel 1, luego una de nivel 2, y así sucesivamente.
    2. Justificar: ¿Puede chuckNorris pedir otro trago con la función dameOtro?
    3. Justificar: ¿puedo hacer que chuckNorris realice el itinerario básico y conocer su resistencia resultante?
    4. Justificar: ¿puedo preguntar si chuckNorris tiene más resistencia que ana?
 
-
-Punto 6: BONUS
+### Punto 6: BONUS
 ¡Se agrega al boliche la jarra popular! Cuando un cliente toma de la jarra popular, se vuelve amigo de los amigos de sus amigos, y de los amigos de los amigos de sus amigos, etc. La cantidad máxima de indirecciones está determinado por el nivel de espirituosidad de la jarra popular. Debe tenerse en cuenta que, como ya se explicó anteriormente, no se agregue amigos que ya tiene, ni a sí mismo.
 
-Casos de prueba
+## Casos de prueba
 A los casos de prueba de la entrega anterior (que deben volver a correrse y garantizar que todo siga funcionando), se incorporan estos nuevos tests.
 
 
-Punto 1b
+### Punto 1b
    * Marcos toma una soda de nivel 3 y queda con 2 bebidas
    * Marcos toma una soda de nivel 3 y queda con 40 de resistencia
 
 
-Punto 1c
+### Punto 1c
    * Rodri toma una soda de nivel 1 y una soda de nivel 2 y queda con nombre errperpRodri
    * Marcos toma un klusener de huevo, un tintico y una jarraLoca y queda con 30 de resistencia
    * Marcos toma un klusener de huevo, un tintico y una jarraLoca y queda con 4 bebidas en el historial
 
 
-Punto 1d
+### Punto 1d
    * Ana pide “dame otro” y debe dar error
    * Marcos pide “dame otro” y tiene 2 bebidas en el historial
    * Marcos pide “dame otro” y lo deja con 34 de resistencia
@@ -180,12 +172,12 @@ Punto 1d
    * Rodri toma una soda de nivel 1, y "dameOtro" da como resultado que su nombre queda “erperpRodri”
 
 
-Punto 2b
+### Punto 2b
    * Rodri puede tomar dos bebidas, entre un grog XD, un tintico y un klusener de frutilla
    * Entre un grog XD, un tintico, un klusener de "fruuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuutilla" se puede tomar una sola bebida
 
 
-Punto 3b
+### Punto 3b
    * Rodri hace una salida de amigos y debe quedar con un amigo
    * Rodri hace una salida de amigos y se debe llamar “erpRodri”
    * Rodri hace una salida de amigos y debe quedar con 45 de resistencia
@@ -193,20 +185,20 @@ Punto 3b
    * Rodri hace una salida de amigos y debe quedar con 4 bebidas en su historial. 
 
 
-Punto 4a
+### Punto 4a
    * la intensidad de la mezcla explosiva es 1.6
    * la intensidad de la salidaDeAmigos es 4.0
    * la intensidad del itinerario basico es 0.8
 
 
-Punto 4b
+### Punto 4b
    * Entre la salida de amigos, la mezcla explosiva y el itinerario básico, el itinerario más intenso es la salida de amigos (tip: se puede reconocer por el nombre)
    * Rodri hace el itinerario más intenso entre una salida de amigos, la mezcla explosiva y el itinerario básico y queda con el nombre "erpRodri"
    * Rodri hace el itinerario más intenso entre una salida de amigos, la mezcla explosiva y el itinerario básico y queda con resistencia 45
    * Rodri hace el itinerario más intenso entre una salida de amigos, la mezcla explosiva y el itinerario básico y queda con un amigo: Roberto Carlos
 
 
-Punto 6
+### Punto 6
    * Roberto Carlos se hace amigo de Ana, toma una jarra popular de espirituosidad 0, sigue quedando con una sola amiga (Ana)
    * Roberto Carlos se hace amigo de Ana, toma una jarra popular de espirituosidad 3, queda con 3 amigos (Ana, Marcos y Rodri)
    * Cristian se hace amigo de Ana. Roberto Carlos se hace amigo de Cristian, toma una jarra popular de espirituosidad 4, queda con 4 amigos (Cristian, Ana, Marcos y Rodri)
